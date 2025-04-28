@@ -1,0 +1,30 @@
+<div class="wrapper" *ngIf="movie">
+    <h3>{{movie.title}}</h3>
+    <div class="movieContent">
+    <mat-card class="movie-card" appearance="outlined">
+        <img mat-card-image [src]="movie.poster">
+        <mat-card-content>
+            <mat-list role="list">
+                <mat-list-item clas>Reziser: {{movie.director.name}}</mat-list-item>
+                <mat-list-item>Trajanje: {{movie.runTime}}min</mat-list-item>
+                <mat-list-item>U glavnoj ulozi: {{getFirstActorName(movie)}}</mat-list-item>
+                <mat-list-item>Zanr: {{getGenres(movie)}}</mat-list-item>
+            </mat-list>
+        </mat-card-content>
+        <mat-card-actions>
+            <a mat-button [routerLink]="['/details/'+movie.movieId+'/order']"> 
+                <i class="fa-solid fa-cart-shopping"></i> Book Now
+            </a>
+        </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="text-card" appearance="outlined">
+        <mat-card-content>
+            <p class="custom-text">{{movie.description}}</p>
+        </mat-card-content>
+    </mat-card>
+
+    </div>
+      
+
+</div>

@@ -20,7 +20,7 @@ export class MovieService {
             params: {
                 'page': page,
                 'size': size,
-                'sort': 'startDate,asc',
+                'sort': 'startAt,desc',
                 'type': 'createdAt'
             }
         })
@@ -28,7 +28,7 @@ export class MovieService {
     }
 
     static async getMovieById(id: number) {
-        return axios.get(`/movie/${id}`)
+        return client.get(`/movie/${id}`)
     }
 
 }

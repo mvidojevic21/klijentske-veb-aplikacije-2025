@@ -1,0 +1,44 @@
+.movie-card{
+    width: 30%;
+    height: 820px;
+    margin-left: 85px;
+}
+
+.movieContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.movieContent img{
+   max-width: 500px; 
+   max-height:550px;
+}
+
+h3{
+    text-align: left;
+    font-size: 26px;
+    font-weight: bold;
+    margin-left: 85px;
+}
+
+.text-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    min-height: 200px;  
+    max-height: 600px;  
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 50px;
+    overflow: auto;  
+    word-wrap: break-word; 
+}
+
+.custom-text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+}
