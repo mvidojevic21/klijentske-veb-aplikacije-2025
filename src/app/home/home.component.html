@@ -1,1 +1,16 @@
-<p>home works!</p>
+<div *ngIf="error">
+    <h3>Oops, an error</h3>
+    <p style="color: red;">Error: {{error}}</p>
+
+
+</div>
+<div *ngIf="movies">
+    <p *ngFor="let movie of movies"></p>
+    <pre>{{movies | json}}</pre>
+
+</div>
+
+<div *ngIf="!movies && !error">
+    <p>Podaci se ucitavaju</p>
+
+</div>
