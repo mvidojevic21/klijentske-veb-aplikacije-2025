@@ -1,41 +1,39 @@
 export interface MovieModel {
-    movieId: number;
-    internalId: string;
-    corporateId: string;
-    directorId: number;
-    title: string;
-    originalTitle: string;
-    description: string;
-    shortDescription: string;
-    poster: string;
-    startDate: string;
-    shortUrl: string;
-    runTime: number;
-    createdAt: string;
-    updatedAt: null | string;
+    movieId: number
+    internalId: string
+    corporateId: string
+
+    title: string
+    originalTitle: string
+    description: string
+    shortDescription: string
+    poster: string
+
+    startDate: string
+    shortUrl: string
+    runTime: string
+    createdAt: string
+    updatedAt: null | string
+
     director: {
-        directorId: number;
-        name: string;
-        createdAt: string;
-    };
-    movieActors: Array<{
-        movieActorId: number;
-        movieId: number;
-        actorId: number;
+        directorId: number
+        name: string
+    }
+    movieActors: {
+        movieActorId: number
         actor: {
-            actorId: number;
-            name: string;
-            createdAt: string;
-        };
-    }>;
-    movieGenres: Array<{
-        movieGenreId: number;
-        movieId: number;
-        genreId: number;
+            actroId: number
+            name: string
+        }
+    }
+
+    movieGenre: {
+        movieGenreId: number
         genre: {
-            genreId: number;
-            name: string;
-            createdAt: string;
-        };
-    }>;
+            genreId: number
+            name: string
+        }
+    }
+
+
 }
