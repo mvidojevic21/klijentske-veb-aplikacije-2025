@@ -13,8 +13,6 @@ export class UtilsService {
     return new Date(iso).toLocaleString('sr-RS')
   }
 
-  public getMovieImagePath(movieId: number): string {
-    return `assets/imgs/${movieId}.jpg`;
-  }
+  
 }
 

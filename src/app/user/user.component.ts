@@ -106,7 +106,7 @@ export class UserComponent {
     }
   }
 
-  public rateMovie(order: OrderModel, rating: number): void {
+  public doRating(order: OrderModel, rating: number): void {
     if (confirm(`Are you sure you want to rate this movie with ${rating} stars?`)) {
       console.log('Rating:', rating, 'for order:', order.id);
 

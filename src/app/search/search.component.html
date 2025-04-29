@@ -38,7 +38,9 @@
                 <a mat-button [routerLink]="['/details/',element.movieId]">
                     <i class="fa-solid fa-up-right-from-square"></i> Details
                 </a>
-                <button mat-button><i class="fa-solid fa-cart-shopping"></i> Book Now</button>
+                <a mat-button [routerLink]="['/details/'+element.movieId+'/order']"> 
+                    <i class="fa-solid fa-cart-shopping"></i> Book Now
+                </a>
             </td>
         </ng-container>
 

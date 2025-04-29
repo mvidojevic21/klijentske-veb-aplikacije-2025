@@ -1,0 +1,46 @@
+<div *ngIf="movie">
+    <mat-card class="order-card" appearance="outlined">
+        <img mat-card-image [src]="movie.poster">
+        <mat-card-content>
+            <h3>New Order - {{movie.title}}</h3>
+            <mat-form-field class="full-width">
+                <mat-label>Title</mat-label>
+                <input type="text" matInput [value]="movie.title" disabled>
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>Genre</mat-label>
+                <input type="text" matInput [value]="getGenres(movie)" disabled>
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>Start:</mat-label>
+                <input type="text" matInput [value]="movie.createdAt | date:'dd.MM.yyyy HH:mm'" disabled>
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>Number of tickets</mat-label>
+                <input type="number" matInput [(ngModel)]="selectedTicketCount">
+            </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>Price of tickets</mat-label>
+                <mat-select [(value)]="selectedPrice">
+                    <mat-option [value]="1000">Front row 1000 dinara</mat-option>
+                    <mat-option [value]="700">Back row 700 dinara</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>Total price</mat-label>
+                <input type="number" matInput [value]="selectedPrice * selectedTicketCount" readonly>
+            </mat-form-field>
+
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button (click)="doOrder()">
+                <i class="fa-solid fa-cart-shopping"></i> Order now
+            </button>
+        </mat-card-actions>
+      </mat-card>
+</div>
