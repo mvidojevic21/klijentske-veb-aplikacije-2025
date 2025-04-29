@@ -55,7 +55,12 @@
     </mat-card>
 
     <div *ngIf="user.orders.length == 0">
-        <p>No orders</p>
+        <mat-card appearance="outlined">
+            <mat-card-content>
+                <h1>You have no orders yet!</h1>
+                <p>To place an order visit the <a routerLink="/search">Search</a> page</p>
+            </mat-card-content>
+        </mat-card>
     </div>
 
     <div *ngIf="user.orders.length > 0">
